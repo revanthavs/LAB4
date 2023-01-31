@@ -17,13 +17,31 @@ The resuls shown after following "/polls":
 "
 Hello, world. You're at the polls index.
 "
+
 Question 4: What is a Django migration and why do we need them?
+Django migration helps to automate sequire commands reflecting any changes in model. It's need to maintain the database(or model)  in Django.
 
 Question 5: What do you see after you log into the Django adminstration site? From a high levle, how do you get custom models to appear in the Django admin page?
+The resuls shown after following "/admin" is a login page.
 
 Question 6: What do you see when you go to /polls/38/ in your browser? What about /polls/38/results and /polls/38/vote? What happens when you don’t put a number, and instead use a string? How would you modify the urls.py file to allow arbitrary alphabetic characters?
+The results showns after following "/polls/38/" is:
+"You're looking at question 38."
+The results showns after following "/polls/38/vote" is:
+"You're voting on question 38."
+The resuls showns after enterying string instead of number is:
+"The current path, polls/"38", didn’t match any of these."
+Instead of using int as the required path variable in path we can modify it to string to allow string.
 
 Question 7: Why is it a bad idea to hardcode urls into the templates?
+Hardcoding urls makes changing URLs harder and makes linking to the wrong page easier. 
 
-Question 8: What are the benefits of using Django's generic views over writing views 'the hard way'? When should you use a generic view and when shouldn't you use a generic view?
+Question 8: What are the benefits of using Django's generic views over writing views 'the hard way'? 
+When should you use a generic view and when shouldn't you use a generic view?
 
+Using generic views over writing views 'the hard way' make it more easy for developers to implement a view simple and
+without worring about boilerplate code.
+
+When we have our view that is simple and similar to the generic views then we can avoid doing the boiler plate code,
+and just use generic view. But, when we want to have a something specific view which is different from what is given
+by generic view then we shouldn't use generic views.
